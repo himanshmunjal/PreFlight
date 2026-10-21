@@ -1,0 +1,4 @@
+# Pre-trade risk limits enforced by the order gateway.
+max_order_qty: 1000
+max_order_notional: 5000000
+max_orders_per_second: 20

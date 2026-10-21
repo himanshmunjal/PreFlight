@@ -1,0 +1,7 @@
+# Strategy parameters. Hashed into config/manifest.json: any edit makes
+# config_integrity CRIT until the manifest is regenerated (`make manifest`).
+symbol: RELIANCE
+fast_window: 5
+slow_window: 20
+order_qty: 10
+stale_after_seconds: 5
