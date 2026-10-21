@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "preflight"
+version = "0.1.0"
+description = "Pre-market readiness checker: one GO / NO-GO verdict before the open"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6",
+    "psutil>=5.9",
+    "redis>=5",
+    "psycopg[binary]>=3.1",
+    "docker>=7",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "tzdata",
+]
+
+[project.scripts]
+preflight = "preflight.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["preflight*"]
+
+[tool.setuptools.package-data]
+preflight = ["static/*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
